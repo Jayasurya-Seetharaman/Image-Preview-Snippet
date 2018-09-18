@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <style>
+  footer {
+    position: fixed;
+    bottom: 0px;
+    padding: 15px 20px;
+    width: 100%;
+    background: #676869;
+    text-align: center;
+  }
+  footer p {
+    margin-bottom: 0px;
+    color: #fff;
+  }
+  </style>
+
+</head>
+<body>
+
+<!-- <div class="jumbotron text-center">
+
+</div> -->
+
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12 text-center">
+        <h1>Image Preview</h1>
+        <p>Paste any image url!</p>           
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        Image Url: <input type="text" class="form-control" id="imgURL"/>
+    </div>
+  </div>
+  <div class="row mt-3">
+      <div class="col-sm-6 offset-sm-3">
+        <img id="imgPreview" class="img-fluid"/>
+      </div>
+  </div>
+</div>
+
+<footer>
+    <p>Developed with <i class="fa fa-heart" style="color: #d61a1a;" aria-hidden="true"></i> by Jayasurya</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  $('#imgURL').keyup(function () {
+    // $('#imgPreview').attr('height', 150);
+    // $('#imgPreview').attr('width', 150);
+    $('#imgPreview').attr('src', $('#imgURL').val())
+  }) 
+});
+</script>
+
+</body>
+</html>
